@@ -1,0 +1,193 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins';
+}
+body{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background:linear-gradient(to right bottom,rgb(158, 158, 158),lightgray);
+}
+.todolist-container{
+    width: 1400px;
+    height: 80vh;
+    background-color:#fff;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.todolist-tools{
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    background-color: #454545;
+}
+.todolist-tools .tool-search{
+    width: 50%;
+    display: flex;
+    align-items: center;
+}
+input[placeholder="search"]{
+    width: 50%;
+    border: none;
+    outline: 0;
+    padding: 4px;
+    border-radius:5px;
+    background-color: #5e5e5e;
+    color: #fff;
+}
+input[placeholder="search"]:hover{
+    background-color: #646464;
+}
+input[placeholder="search"]::placeholder{
+    color: #a1a1a1;
+    opacity: 1;
+}
+.todolist-tools .tool-search i{
+    font-size: 25px;
+    margin-right: 10px;
+    color: #8b8b8b;
+}
+.todolist-tools .tool-buttons{
+    width: 50%;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+}
+.todolist-tools .tool-buttons button{
+    border: 0;
+    outline: 0;
+    margin: 3px 5px;
+    padding: 5px 10px;
+    font-size: 15px;
+    cursor: pointer;
+    background-color: #616161;
+    color: #fff;
+    border-radius: 3px;
+}
+.todolist-tools .tool-buttons button:hover{
+    background-color: #61616155;
+}
+
+/* todolist List */
+
+.todolist-list-container{
+    width: 100%;
+    height: 91%;
+    background-color: #5e5e5e;
+    overflow-x: auto;
+    color: #e7e7e7;
+}
+ul li{
+    list-style: none;
+    font-size: 17px;
+    padding: 12px 8px 12px 50px;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+}
+ul li:hover{
+    background-color: #525252;
+}
+ul li::before{
+    content: '';
+    position: absolute;
+    height: 16px;
+    width: 16px;
+    background-image: url(../image/unchecked.png);
+    border-radius: 50%;
+    background-size: cover;
+    background-position: center;
+    top: 17.70px;
+    left: 18px;
+}
+ul li.checked{
+    color: #a7a7a7;
+    text-decoration: line-through;
+}
+ul li.checked::before{
+    background-image: url(../image/checked.png);
+}
+ul li span{
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    width: 40px;
+    height: 40px;
+    font-size: 27px;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    color: white;
+}
+ul li span:hover{
+    background: #646464;
+}
+
+/* input list style */
+
+.input-container{
+    position: fixed;
+    background-color: #000000a9;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content:center;
+    align-items:center;
+    visibility: hidden;
+    user-select: none;
+}
+.input-container .input-box{
+    width: 500px;
+    height: 250px;
+    background-color: #616161;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 15px;
+}
+.input-box .list-input{
+    width: 85%;
+}
+input[id="list-input"]{
+    background-color: #454545;
+    text-align: center;
+    outline: 0;
+    border: none;
+    width: 100%;
+    padding: 10px;
+    border-radius: 3px;
+    margin-bottom: 30px;
+    color: rgb(197, 197, 197);
+}
+input[id="list-input"]::placeholder{
+    color: rgb(197, 197, 197);
+}
+input[id="list-input"]:hover{
+    background-color: #454545b4;
+}
+.input-box .input-box-footer{
+    display: flex;
+    width: 70%;
+    justify-content: space-between;
+}
+.input-box .input-box-footer button{
+    border: 0;
+    outline: 0;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 15px;
+    background-color: #3cff0044;
+    transition: box-shadow 0.2s;
+}
+.input-box .input-box-footer button:nth-child(1){
+    background-color: #ff000044;
+}
+.input-box .input-box-footer button:hover{
+    box-shadow: 0 0 10px #0000006c;
+}

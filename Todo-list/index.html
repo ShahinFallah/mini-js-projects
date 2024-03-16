@@ -1,0 +1,52 @@
+<html lang="fa">
+    <head>
+        <meta charset="UTF-8">
+        <title>test</title>
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">    
+    </head>
+    <body>
+
+        <div class="todolist-container">
+
+            <!-- Tools --------- -->
+            <div class="todolist-tools">
+                <div class="tool-search">
+                    <label for="search"><i class="fa fa-search"></i></label>
+                    <input id="search" type="text" placeholder="search">
+                </div>
+                <div class="tool-buttons">
+                    <button id="clear">Clear</button>
+                    <button id="input-box">+</button>
+                </div>
+            </div>
+
+            <!-- Lists --------- -->
+            <div class="todolist-list-container">             
+                <ul class="todolist-list-ul">
+                </ul>
+            </div>
+        </div>
+        <!-- Input List -------- -->
+        <div class="input-container">
+            <div class="input-box">
+                <h2>Enter your text</h2>
+                <div class="list-input">
+                    <input id="list-input" type="text" placeholder="write...">
+                </div>
+                <div class="input-box-footer">
+                    <button id="cancel">cancel</button>
+                    <button onclick="addList()" id="add">add</button>
+                </div>
+            </div>
+        </div>
+
+
+        <script src="js/javaScript.js"></script>
+    </body>
+</html>
+
+
+<!-- <span class="time"><i class="fa fa-clock-o"</i>Today</span>
+    <i id="edit" class="fa-solid fa-pen-to-square"></i>
+    <i id="delete" class="fa-solid fa-trash"></i> -->
