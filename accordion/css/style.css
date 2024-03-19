@@ -1,0 +1,71 @@
+@import url(https://fonts.googleapis.com/css?family=Poppins);
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+}
+.accordion{
+    width: 700px;
+}
+.accordion .wrapper span{
+    background-color: #eee;
+    display:block;
+    width: 100%;
+    cursor: pointer;
+    padding: 15px;
+    transition:background 0.4s;
+    border-bottom: 1px solid #ccc;
+}
+.accordion:first-of-type span{
+    border-radius: 10px 10px 0 0;
+}
+.accordion:last-of-type span{
+    border-bottom: none;
+    border-radius:  0 0 10px 10px;
+}
+.accordion:last-of-type div.show span{
+    border-radius:0
+}
+.accordion:last-of-type div.show div{
+    border-radius:0 0 10px 10px
+}
+.accordion .wrapper span:after{
+    content: "+";
+    float: right;
+}
+.accordion .show span:after{
+    content: "-";
+    float: right;
+}
+.accordion .wrapper span:hover,
+.accordion > .show > span{
+    background: #ccc;
+}
+.accordion .wrapper div{
+    max-height: 0;
+    overflow: hidden;
+    transition-property:padding max-height;
+    transition-duration:0.3s;
+    text-align: justify;
+}
+.accordion > .show > div{
+    padding:15px;
+    display: block;
+    border: 1px solid #ccc;
+}
+
+
+p{
+    color: rgb(0, 140, 255);
+    display: inline;
+}
