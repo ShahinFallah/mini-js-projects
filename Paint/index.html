@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://kit.fontawesome.com/18fcc3f104.js" crossorigin="anonymous"></script>
+    <title>Document</title>
+</head>
+<body>
+
+    <div class="container">
+        <div class="tools-area">
+            <div class="tools">
+                <div class="eraser">
+                    <i class="fa-solid fa-eraser" id="eraser"></i>
+                    <label for="eraser">eraser</label>
+                </div>
+                <div class="brush">
+                    <i class="fa fa-paint-brush" id="brush"></i>
+                    <label for="brush">brush</label>
+                </div>
+                <div class="choose-color">
+                    <i class="fa-sharb fa-solid fa-palette"></i>
+                    <label for="choose-color">choose-color</label>
+                    <input type="color" id="choose-color">
+                </div>
+                <input id="widthRange" type="range" min="1" max="10" >
+            </div>
+            <div class="buttons">
+                <button id="save">save</button>
+                <button id="clear">clear</button>
+            </div>
+        </div>
+        <div class="draw-area">
+            <canvas></canvas>
+        </div>
+    </div>
+
+    <script src="js/javaScript.js"></script>
+</body>
+</html>
