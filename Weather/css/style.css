@@ -1,0 +1,144 @@
+@import url(https://fonts.googleapis.com/css?family=Poppins);
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins';
+}
+
+body {
+    background-color: #222;
+}
+
+.card {
+    width: 90%;
+    max-width: 470px;
+    background: linear-gradient(135deg, #00f3ba, #5b548a);
+    color: #fff;
+    margin: 100px auto 0;
+    border-radius: 20px;
+    padding: 40px 35px;
+    text-align: center;
+    position: relative;
+}
+
+.search {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.search input {
+    border: 0;
+    outline: 0;
+    background-color: #ebfffc;
+    color: #555;
+    padding: 15px 25px;
+    border-radius: 30px;
+    font-size: 18px;
+    width: 85%;
+}
+
+.search button {
+    border: 0;
+    outline: 0;
+    background-color: #ebfffc;
+    border-radius: 50%;
+    cursor: pointer;
+    color: #555;
+    padding: 12px;
+    font-size: 23px;
+    height: 50px;
+    width: 50px;
+}
+
+.weather-icon {
+    width: 170px;
+    margin-top: 30px;
+}
+
+.weather h1 {
+    font-size: 80px;
+    font-weight: 500;
+}
+
+.weather h2 {
+    font-size: 45px;
+    font-weight: 400;
+    margin-top: -10px;
+}
+
+.details {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    margin-top: 50px;
+}
+
+.col {
+    display: flex;
+    align-items: center;
+    text-align: left;
+}
+
+.col img {
+    width: 45px;
+    margin-right: 10px;
+}
+
+.humidity,
+.wind {
+    font-size: 28px;
+    margin-top: 6px;
+}
+
+.weather {
+    display: none;
+}
+
+.error {
+    margin-top: 20px;
+    display: none;
+}
+
+.error span {
+    font-size: 28px;
+    margin-top: 7px;
+}
+
+.loading {
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Loader from https://css-loaders.com */
+.loader {
+    margin-top: 20px;
+    width: 80px;
+    height: 40px;
+    color: #d8d8d8;
+    --c: radial-gradient(farthest-side,currentColor 96%,#0000);
+    background: 
+      var(--c) 100% 100% /30% 60%,
+      var(--c) 70%  0    /50% 100%,
+      var(--c) 0    100% /36% 68%,
+      var(--c) 27%  18%  /26% 40%,
+      linear-gradient(currentColor 0 0) bottom/67% 58%;
+    background-repeat: no-repeat;
+    position: relative;
+  }
+  .loader:after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: inherit;
+    opacity: 0.4;
+    animation: l7 1s infinite;
+  }
+  @keyframes l7 {
+    to {transform:scale(1.8);opacity:0}
+  }
